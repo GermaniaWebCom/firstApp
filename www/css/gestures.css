@@ -1,0 +1,124 @@
+/* @Css Document */
+
+body {
+	background-color: #8eadc5;
+}
+
+body.claro{
+	background-color: #8ae1bd;
+}
+
+body.oscuro{
+	background-color: #577a76;
+}
+
+button{
+	background-color: #7fba67;
+	color: #ffffff;
+	border: none;
+	font-size: 1em;
+	margin-top: 10px;
+	padding: 30px;
+	width: 100%;
+}
+
+/* Segunda Clase */
+
+#zona-gestos{
+	background-color: #7fba67;
+	display: block;
+	margin-top: 10px;
+	min-height: 300px;
+	width: 100%;
+}
+
+#info{
+	color: #ffffff;
+	font-size: 2em;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+/*Aquí comienza el código de las animaciones que asociaremos a los gestos */
+
+#zona-gestos.tap{
+	-webkit-animation: fondo 0.1s 1;
+}
+
+#zona-gestos.doubletap{
+	-webkit-animation: pulsacion 1.5s 1;
+}
+
+#zona-gestos.press{
+	-webkit-animation: presion 1.5s 1;
+}
+
+@-webkit-keyframes fondo{
+	0%, 100%{
+		background-color: #7fba67;
+	}
+	50%{
+		background-color: #E8E20C;
+	}
+}
+
+@-webkit-keyframes pulsacion{
+	0%, 100%{
+		background-color: #7fba67;
+	}
+	50%{
+		background-color: #8de1bd;
+	}
+}
+
+@-webkit-keyframes presion{
+	0%, 100%{
+		background-color: #7fba67;
+	}
+	50%{
+		background-color: #577a76;
+	}
+}
+
+/* Clases para los eventos swipe y rotate */
+
+#zona-gestos.swipe-derecha{
+	-webkit-animation: swipe-derecha 3s 1;
+}
+
+#zona-gestos.swipe-izquierda{
+	-webkit-animation: swipe-izquierda 3s 1;
+}
+
+#zona-gestos.rotate{
+	-webkit-animation: rotate 3s 1;
+}
+
+@-webkit-keyframes swipe-derecha{
+	0%, 100%{
+		margin-left: 0;
+	}
+	50%{
+		margin-left: 100%;
+	}
+}
+
+
+@-webkit-keyframes swipe-izquierda{
+	0%, 100%{
+		width: 100%;
+	}
+	50%{
+		width: 0;
+	}
+}
+
+/* Animación de rotación */
+
+@-webkit-keyframes rotate{
+	 100%{
+		-webkit-transform: rotate(360deg);
+	}
+	
+}
+
